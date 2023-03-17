@@ -13,6 +13,13 @@
     left:115px
 }
 
+.d-flex{
+    display: flex;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
 /*background*/
 .green-head{
     height: 100px;
@@ -30,4 +37,17 @@
     background-color: black;
     width: 80%;
     height: calc(100vh - 40px);
+}
+
+/*contact side*/
+.contact-side{
+    width: 40%;
+    background-color: aquamarine;
+}
+
+/*message side*/
+.message-side{
+    width: 60%;
+    background-color: blue;
+
 }
