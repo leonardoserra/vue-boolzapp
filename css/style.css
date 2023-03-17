@@ -15,6 +15,8 @@ html{
     --fifth-color:#b1b1b1;
     --sixth-color:#7a7a7a;
     --seventh-color:#fafafa;
+    --eighty-color:#bdbdbd;
+
 }
 
 /*utility rules*/
@@ -61,22 +63,28 @@ html{
 
 /*background*/
 .green-head{
+    min-width: 100%;
     height: 100px;
     background-color: #009688;
 }
 
 .grey-main{
+    min-width: 100%;
     height: calc(100vh - 100px);
     background-color: #d9dbd4;
 }
 
 /******     APP-WINDOW     ******/
 .app-window{
-    width: 80%;
+    width: calc(100% - 230px);
+    min-width: 800px;
     height: calc(100vh - 40px);
     top: 20px;
     left: 115px;
 }
+
+
+
 
 /*****   contact side   *****/
 .contact-side{
@@ -195,7 +203,7 @@ html{
     color: var(--fifth-color);
 }
 
-.card .received-time{
+.card .last-access{
     top:3px;
     right: 3px;
     font-size: 9px;
@@ -206,10 +214,25 @@ html{
 
 
 
-
 /*****   message side   *****/
 .message-side{
     width: 60%;
-    background-color: blue;
-
+    border-left: 1px solid var(--eighty-color);
+}
+.message-header{
+    height: 50px;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 5px;
+}
+.message-main{
+    background-image: url(../img/mine.jpg);
+    height: calc(100% - 100px);
+    scroll-behavior: smooth;
+}
+.message-footer{
+    height: 50px;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 5px;
 }
