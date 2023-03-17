@@ -203,7 +203,7 @@ html{
     color: var(--fifth-color);
 }
 
-.card .last-access{
+.card .last-access-time{
     top:3px;
     right: 3px;
     font-size: 9px;
@@ -219,17 +219,37 @@ html{
     width: 60%;
     border-left: 1px solid var(--eighty-color);
 }
+
 .message-header{
     height: 50px;
     width: 100%;
     background-color: var(--primary-color);
     padding: 5px;
 }
+
+.message-header .last-access-info{
+    font-size: 12px;
+    color: var(--fifth-color);
+}
+
+.message-header .last-message-info{
+    font-size: 12px;
+    color: var(--fifth-color);
+}
+
+
+
+
+
+
+
+/*message main*/
 .message-main{
     background-image: url(../img/mine.jpg);
     height: calc(100% - 100px);
     scroll-behavior: smooth;
 }
+/*message footer*/
 .message-footer{
     height: 50px;
     width: 100%;
