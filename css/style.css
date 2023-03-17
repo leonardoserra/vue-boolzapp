@@ -10,6 +10,7 @@
     --secondary-color:#ffffff;
     --tertiary-color:#e9ebeb;
     --quaternary-color:#8edafc;
+    --fifth-color:#b1b1b1;
 }
 
 /*utility rules*/
@@ -75,11 +76,20 @@
     height: 50px;
     width: 100%;
     background-color: var(--primary-color);
-    padding: 2px;
+    padding: 5px;
 }
 
 .user{
-height: 100%;
+    height: 100%;
+}
+
+.user-options{
+    padding: 0px 20px;
+}
+
+.user-options-icon{
+    margin-left: 20px;
+    color: var(--fifth-color);
 }
 
 .rounded-frame{
@@ -91,10 +101,6 @@ height: 100%;
     height: 100%;
     object-fit: cover;
 
-}
-
-.my-name{
-    line-height: 50px;
 }
 
 .notify-bar{
