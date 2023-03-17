@@ -16,6 +16,8 @@ html{
     --sixth-color:#7a7a7a;
     --seventh-color:#fafafa;
     --eighty-color:#bdbdbd;
+    --sent-color: #d5f9ba;
+    --received-color: #fff;
 
 }
 
@@ -35,6 +37,11 @@ html{
 .space-between{
     justify-content: space-between;
 }
+
+.space-around{
+    justify-content: space-around;
+}
+
 .justify-center{
     justify-content: center;
 }
@@ -51,8 +58,12 @@ html{
     align-items: center;
 }
 
+.text-center{
+    text-align: center;
+}
+
 .overflow-y{
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .fit{
@@ -239,20 +250,74 @@ html{
 
 
 
-
-
-
-
 /*message main*/
 .message-main{
     background-image: url(../img/mine.jpg);
     height: calc(100% - 100px);
     scroll-behavior: smooth;
 }
+
+.message-main .main-container{
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.speech-bubble{
+    font-size: 12px;
+    display: inline-block;
+    position: relative;
+    width: 40%;
+    border-radius: 30px;
+    padding: 20px;
+    margin:15px 15px 0px 15px;
+    text-align: start;
+}
+
+.sent{
+    text-align: end;
+}
+
+.received{
+    text-align: start;
+}
+
+.sent .speech-bubble{
+    background-color: var(--sent-color);
+}
+
+.received .speech-bubble{
+    background-color: var(--received-color);
+}
+
+
+
+
+
+
+
 /*message footer*/
 .message-footer{
     height: 50px;
     width: 100%;
     background-color: var(--primary-color);
     padding: 5px;
+}
+
+.message-footer a{
+    text-decoration: none;
+}
+.message-footer .box{
+    width: 60px;
+}
+
+.message-footer .user-options-icon{
+    color:var(--sixth-color);
+}
+
+.message-footer .message-bar{
+    padding-left: 5px;
+    height: 80%;
+    border: none;
+    border-radius: 5px;
 }
