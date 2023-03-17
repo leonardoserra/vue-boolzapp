@@ -93,8 +93,11 @@ html{
     padding: 0px 20px;
 }
 
-.user-options-icon{
+.user-options a{
     margin-left: 20px;
+}
+
+.user-options-icon{
     color: var(--fifth-color);
 }
 
@@ -126,11 +129,11 @@ html{
 }
 
 .notify-text div:first-child{
-    font-size: 14px;
+    font-size: 12px;
 }
 .notify-text a{
     color:var(--sixth-color);
-    font-size: 12px;
+    font-size: 10px;
 }
 
 /*message side*/
