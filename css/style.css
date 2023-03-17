@@ -72,6 +72,21 @@
     background-color: var(--primary-color);
 }
 
+.rounded-frame{
+    height: 100%;
+}
+
+.rounded-frame img{
+    height: 100%;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.user{
+    line-height: 50px;
+}
+
 .notify-bar{
     height: 60px;
     background-color: var(--quaternary-color);
