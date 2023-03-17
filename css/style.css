@@ -65,19 +65,19 @@ html{
     background-color: #d9dbd4;
 }
 
-/*app-window*/
-
+/******     APP-WINDOW     ******/
 .app-window{
     width: 80%;
     height: calc(100vh - 40px);
 }
 
-/*contact side*/
+/*****   contact side   *****/
 .contact-side{
     width: 40%;
     background-color: var(--secondary-color);
 }
 
+/*account-bar*/
 .account-bar{
     height: 50px;
     width: 100%;
@@ -111,14 +111,17 @@ html{
     object-fit: cover;
 }
 
+/*notify-bar*/
 .notify-bar{
     height: 60px;
     background-color: var(--quaternary-color);
 }
+
 .notify-bar .rounded-frame{
     height: 60px;
     width: 60px;
 }
+
 #notify-bell{
     background-color: var(--secondary-color);
     font-size: 15px;
@@ -136,7 +139,28 @@ html{
     font-size: 10px;
 }
 
-/*message side*/
+/*search-bar*/
+.search-bar{
+    background-color: var(--tertiary-color);
+    padding: 5px;
+}
+
+.search-bar button, .search-bar input{
+    height: 30px;
+}
+
+.search-bar button{
+    width: 40px;
+    border: 1px solid var(--fifth-color);
+    border-right: none;
+    color: var(--sixth-color);
+}
+
+.search-bar input{
+    border: 1px solid var(--fifth-color);
+}
+
+/*****   message side   *****/
 .message-side{
     width: 60%;
     background-color: blue;
