@@ -39,6 +39,10 @@
     flex-grow: 1;
 }
 
+.align-center{
+    align-items: center;
+}
+
 .overflow-y{
     overflow-y: auto;
 }
@@ -69,7 +73,13 @@
 
 .account-bar{
     height: 50px;
+    width: 100%;
     background-color: var(--primary-color);
+    padding: 2px;
+}
+
+.user{
+height: 100%;
 }
 
 .rounded-frame{
@@ -77,13 +87,13 @@
 }
 
 .rounded-frame img{
-    height: 100%;
-    width: 50px;
-    object-fit: cover;
     border-radius: 50%;
+    height: 100%;
+    object-fit: cover;
+
 }
 
-.user{
+.my-name{
     line-height: 50px;
 }
 
