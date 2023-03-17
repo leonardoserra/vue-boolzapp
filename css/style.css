@@ -50,7 +50,7 @@ html{
 }
 
 .overflow-y{
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .fit{
@@ -164,7 +164,9 @@ html{
 }
 
 /*contacts*/
-
+.contacts{
+    height: calc(100% - 150px);
+}
 .contacts .card{
     height: 80px;
     padding: 10px;
