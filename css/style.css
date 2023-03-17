@@ -14,6 +14,7 @@ html{
     --quaternary-color:#8edafc;
     --fifth-color:#b1b1b1;
     --sixth-color:#7a7a7a;
+    --seventh-color:#fafafa;
 }
 
 /*utility rules*/
@@ -23,8 +24,6 @@ html{
 
 .pos-abs{
     position: absolute;
-    top:20px;
-    left:115px
 }
 
 .d-flex{
@@ -54,6 +53,12 @@ html{
     overflow-y: auto;
 }
 
+.fit{
+    border-radius: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /*background*/
 .green-head{
     height: 100px;
@@ -69,6 +74,8 @@ html{
 .app-window{
     width: 80%;
     height: calc(100vh - 40px);
+    top: 20px;
+    left: 115px;
 }
 
 /*****   contact side   *****/
@@ -105,12 +112,6 @@ html{
     height: 100%;
 }
 
-.user .rounded-frame img{
-    border-radius: 50%;
-    height: 100%;
-    object-fit: cover;
-}
-
 /*notify-bar*/
 .notify-bar{
     height: 60px;
@@ -141,7 +142,7 @@ html{
 
 /*search-bar*/
 .search-bar{
-    background-color: var(--tertiary-color);
+    background-color: var(--seventh-color);
     padding: 5px;
 }
 
@@ -151,18 +152,58 @@ html{
 
 .search-bar button{
     width: 40px;
-    border: 1px solid var(--fifth-color);
-    border-right: none;
+    border: none;
     color: var(--sixth-color);
     background-color: var(--secondary-color);
 }
 
 .search-bar input{
-    border: 1px solid var(--fifth-color);
-    border-left: none;
+    border: none;
     padding-left: 10px;
     margin-left: 1px;
 }
+
+/*contacts*/
+
+.contacts .card{
+    height: 80px;
+    padding: 10px;
+    border-bottom:1px solid var(--primary-color);
+}
+
+.card .rounded-frame{
+    height: 100%;
+}
+
+.card .rounded-frame .fit{
+    height: 100%;
+    padding: 5px;
+}
+
+.card .contact-info{
+    margin-left: 10px;
+}
+
+.card .contact-info .name{
+    font-size: 14px;
+}
+
+.card .contact-info .last-message-sent{
+    font-size: 12px;
+    color: var(--fifth-color);
+}
+
+.card .received-time{
+    top:3px;
+    right: 3px;
+    font-size: 9px;
+    color: var(--fifth-color);
+}
+
+
+
+
+
 
 /*****   message side   *****/
 .message-side{
