@@ -154,10 +154,14 @@ html{
     border: 1px solid var(--fifth-color);
     border-right: none;
     color: var(--sixth-color);
+    background-color: var(--secondary-color);
 }
 
 .search-bar input{
     border: 1px solid var(--fifth-color);
+    border-left: none;
+    padding-left: 10px;
+    margin-left: 1px;
 }
 
 /*****   message side   *****/
