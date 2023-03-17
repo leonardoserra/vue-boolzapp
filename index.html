@@ -78,10 +78,10 @@
                                         <img class="fit" :src="card.avatar" alt="card.avatar"/>
                                 </div>
                                 <div class="contact-info flex-grow">
-                                    <div class="name">{{card.name}}</div>
-                                    <div class="last-message-sent" v-for="(messageInfo, index) in messages"></div>
+                                    <div class="name"  >{{card.name}}</div>
+                                    <div class="last-message-sent" v-for="(messageInfo, index) in card.messages">{{messageInfo.message}}</div>
                                 </div>
-                                <div class="pos-abs last-access-time">12.00</div>
+                                <div class="pos-abs last-access-time"  v-for="(messageInfo, index) in card.messages">{{messageInfo.date}}</div>
                             </div>
 
                         </div>
