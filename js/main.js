@@ -3,6 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
         return {
+            activeMessage: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -106,7 +107,7 @@ const { createApp } = Vue
                 },
                 {
                     name: 'Claudia',
-                    avatar: "./img/avatar_5.jpg",
+                    avatar: "./img/avatar_8.jpg",
                     visible: true,
                     messages: [
                         {

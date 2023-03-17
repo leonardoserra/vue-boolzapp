@@ -73,13 +73,13 @@
                         <!--contacts-->
                         <div class="contacts overflow-y">
                             <!--card-->
-                            <div class="card d-flex pos-rel">
+                            <div class="card d-flex pos-rel" v-for="(card, index) in contacts">
                                 <div class="rounded-frame">
-                                        <img class="fit" src="./img/avatar_1.jpg" alt="avatar-8"/>
+                                        <img class="fit" :src="card.avatar" alt="card.avatar"/>
                                 </div>
                                 <div class="contact-info flex-grow">
-                                    <div class="name">Mariello</div>
-                                    <div class="last-message-sent">ue pippo com'è?</div>
+                                    <div class="name">{{card.name}}</div>
+                                    <div class="last-message-sent" v-for="(messageInfo, index) in messages"></div>
                                 </div>
                                 <div class="pos-abs last-access-time">12.00</div>
                             </div>
