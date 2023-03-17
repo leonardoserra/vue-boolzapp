@@ -3,16 +3,31 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/*utility rules*/
 .pos-rel{
     position: relative;
 }
+.pos-abs{
+    position: absolute;
+    top:20px;
+    left:115px
+}
 
+/*background*/
 .green-head{
     height: 100px;
     background-color: #009688;
 }
+
 .grey-main{
     height: calc(100vh - 100px);
     background-color: #d9dbd4;
+}
+
+/*app-window*/
+
+.app-window{
+    background-color: black;
+    width: 80%;
+    height: calc(100vh - 40px);
 }
