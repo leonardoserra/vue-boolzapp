@@ -4,4 +4,15 @@
     box-sizing: border-box;
 }
 
+.pos-rel{
+    position: relative;
+}
 
+.green-head{
+    height: 100px;
+    background-color: #009688;
+}
+.grey-main{
+    height: calc(100vh - 100px);
+    background-color: #d9dbd4;
+}
