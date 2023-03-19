@@ -199,6 +199,11 @@ html{
     border-bottom:1px solid var(--primary-color);
 }
 
+.card.selected{
+    background-color: var(--fifth-color);
+    border-bottom:1px solid var(--eighty-color);
+}
+
 .card .rounded-frame{
     height: 100%;
 }
