@@ -6,7 +6,6 @@ const { createApp } = Vue
             newSearch: '',
             newMessage: '',
             selectedConversation: 0,
-            filteredArray: [],
             contacts: [
                 {
                     name: 'Michele',
@@ -135,7 +134,6 @@ const { createApp } = Vue
     },
     
     mounted(){
-        this.searchFilter();
            
     },
 
@@ -171,13 +169,20 @@ const { createApp } = Vue
                 });
             }, 1000) 
         },
-
+        
+        //occhio da rivedere, non funziona, cerco di creare un 
         searchFilter(){
-            this.filteredArray = this.contacts.filter((card)=> card.name == this.newSearch);
-            console.log(this.filteredArray.forEach(element => this.filteredArray.push(element)));
-
+           const arrayCopy = [...this.contacts.filter((element)=>element.name )];
+        //    const arrayCopy = [...filteredArray];
+           console.log(arrayCopy);
+           arrayCopy.forEach(element => {
+                if(element.name.includes(this.newSearch)){
+                    return true;
+                }else{
+                    return false;
+                }
+            });
         }
-
     }
             
 }).mount('#app')
