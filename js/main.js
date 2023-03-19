@@ -174,14 +174,10 @@ const { createApp } = Vue
         searchFilter(){
            const arrayCopy = [...this.contacts.filter((element)=>element.name )];
         //    const arrayCopy = [...filteredArray];
-           console.log(arrayCopy);
+        //    console.log(arrayCopy);
            arrayCopy.forEach(element => {
-                const{singleName} = element;
-                if(!singleName.includes(this.newSearch)){
-                    return false;
-                } else{
-                    return true;
-                }
+            const  {singleName}  = element;
+                console.log(typeof(singleName));
             });
         }
     }
