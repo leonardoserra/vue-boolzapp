@@ -176,10 +176,11 @@ const { createApp } = Vue
         //    const arrayCopy = [...filteredArray];
            console.log(arrayCopy);
            arrayCopy.forEach(element => {
-                if(element.name.includes(this.newSearch)){
-                    return true;
-                }else{
+                const{singleName} = element;
+                if(!singleName.includes(this.newSearch)){
                     return false;
+                } else{
+                    return true;
                 }
             });
         }
