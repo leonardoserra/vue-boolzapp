@@ -75,7 +75,7 @@
                         <!--contacts-->
                         <div class="contacts overflow-y">
                             <!--card-->
-                            <div class="card d-flex pos-rel"  v-for="(card, cardIndex) in contacts" @click="switchVisibility(card, cardIndex)" :class="card.visible?'selected':''">
+                            <div class="card d-flex pos-rel"  v-for="(card, cardIndex) in contacts" @click="selectConversation(card, cardIndex)" :class="showConversation(card, cardIndex)">
                                 <div class="rounded-frame">
                                         <img class="fit" :src="card.avatar" alt="card.avatar" />
                                 </div>

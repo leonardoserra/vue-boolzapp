@@ -136,9 +136,19 @@ const { createApp } = Vue
     },
 
     methods:{
-        switchVisibility(card,index){
+        selectConversation(card, index){
             this.selectedConversation = index;
-            return card.visible = !card.visible;
+        },
+
+        showConversation(card, index){
+            if(index == this.selectedConversation){
+                card.visible = true;
+                return 'selected';
+
+            }else{
+                card.status = false;
+                return '';
+            }
         }
     }
             

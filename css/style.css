@@ -7,12 +7,6 @@ html{
     font-family: 'Raleway', sans-serif;
 }
 
-/*debug*/
-
-.debug{
-    top: 0;
-    left: 0;
-}
 /*palette colori*/
 :root{
     --primary-color:#eaeaea;
@@ -201,7 +195,7 @@ html{
 
 .card.selected{
     background-color: var(--sixth-color);
-    border-bottom:1px solid var(--eighty-color);
+    border-bottom:1px solid var(--fifth-color);
 }
 
 .card .rounded-frame{
