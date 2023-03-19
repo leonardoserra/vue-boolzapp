@@ -73,15 +73,15 @@
                         <!--contacts-->
                         <div class="contacts overflow-y">
                             <!--card-->
-                            <div class="card d-flex pos-rel" v-for="(card, index) in contacts">
+                            <div class="card d-flex pos-rel" v-for="(card, cardIndex) in contacts">
                                 <div class="rounded-frame">
                                         <img class="fit" :src="card.avatar" alt="card.avatar"/>
                                 </div>
                                 <div class="contact-info flex-grow">
                                     <div class="name" >{{card.name}}</div>
-                                    <div class="last-message-sent" v-for="(messageInfo, index) in card.messages">{{messageInfo.message}}</div>
+                                    <div class="last-message-sent" v-for="conversation in card.messages">{{conversation.message}}</div>
                                 </div>
-                                <div class="pos-abs last-access-time"  v-for="(messageInfo, index) in card.messages">{{messageInfo.date}}</div>
+                                <div class="pos-abs last-access-time"  v-for="conversation in card.messages">{{conversation.date}}</div>
                             </div>
 
                         </div>
