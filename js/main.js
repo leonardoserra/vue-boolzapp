@@ -3,6 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
         return {
+            newMessage: '',
             selectedConversation: 0,
             contacts: [
                 {
@@ -149,6 +150,17 @@ const { createApp } = Vue
                 card.status = false;
                 return '';
             }
+        },
+
+        addMessage(place){
+           
+            place.push({
+                date:  '12.00',
+                message: this.newMessage,
+                status: 'sent'
+            });
+            this.newMessage = '';
+            
         }
     }
             

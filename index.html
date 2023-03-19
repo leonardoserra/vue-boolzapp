@@ -127,7 +127,11 @@
                             <div class="main-container" v-if="contacts[selectedConversation].visible">
 
                                 <div v-for="singleMessage in contacts[selectedConversation].messages" :class="singleMessage.status">
-                                    <span class="speech-bubble">{{singleMessage.message}}</span>
+                                    <span class="speech-bubble pos-rel">
+                                        {{singleMessage.message}}
+                                        <span class="pos-abs speech-bubble-hour-sent">{{singleMessage.date}}</span>
+                                    </span>
+                                    
                                 </div>
 
                             </div>
@@ -146,7 +150,7 @@
 
 
 
-                            <input class="message-bar flex-grow" type="text" placeholder="Scrivi un messaggio" />
+                            <input class="message-bar flex-grow" type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="addMessage(contacts[selectedConversation].messages)"/>
                             <div class="box text-center">
                                 <a href="">
                                     <i class="user-options-icon fa-solid fa-microphone"></i>

@@ -280,6 +280,12 @@ html{
     text-align: start;
 }
 
+.speech-bubble-hour-sent{
+    bottom: 3px;
+    right: 15px;
+    font-size: 10px;
+}
+
 .sent{
     text-align: end;
 }
