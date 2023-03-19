@@ -200,7 +200,7 @@ html{
 }
 
 .card.selected{
-    background-color: var(--fifth-color);
+    background-color: var(--sixth-color);
     border-bottom:1px solid var(--eighty-color);
 }
 

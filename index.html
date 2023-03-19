@@ -75,7 +75,7 @@
                         <!--contacts-->
                         <div class="contacts overflow-y">
                             <!--card-->
-                            <div class="card selected d-flex pos-rel" v-for="(card, cardIndex) in contacts">
+                            <div class="card d-flex pos-rel"  v-for="card in contacts" @click="switchVisibility(card)" :class="card.visible?'selected':''">
                                 <div class="rounded-frame">
                                         <img class="fit" :src="card.avatar" alt="card.avatar" />
                                 </div>
@@ -95,7 +95,7 @@
                     <div class="message-side">
                         <!--parte alta-->
                         <div class="message-header d-flex space-between align-center">
-                            <div class="user d-flex align-center">
+                            <div class="user d-flex align-center" v-for="(conversationWindow, index) in contacts" v-if="true">
                                 <div class="rounded-frame">
                                     <a href="#">
                                         <img class ="fit" src="./img/avatar_1.jpg" alt="avatar-1"/>
