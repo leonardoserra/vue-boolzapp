@@ -153,15 +153,22 @@ const { createApp } = Vue
         },
 
         addMessage(place){
-           
             place.push({
-                date:  '12.00',
+                date: new Date().getHours().toString() + ':' + new Date().getMinutes().toString() ,
                 message: this.newMessage,
                 status: 'sent'
             });
             this.newMessage = '';
             
-        }
+            setTimeout(()=>{
+                place.push({
+                    date: new Date().getHours().toString() + ':' + new Date().getMinutes().toString() ,
+                    message: 'ok',
+                    status: 'received'
+                });
+            }, 1000)
+        },
+
     }
             
 }).mount('#app')
