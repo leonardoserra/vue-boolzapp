@@ -166,7 +166,7 @@ const { createApp } = Vue
                     message: 'ok',
                     status: 'received'
                 });
-            }, 1000)
+            }, 1000) 
         },
 
     }
