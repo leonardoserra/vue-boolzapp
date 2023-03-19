@@ -19,6 +19,7 @@
             <div class="container pos-rel">
                 <div class="green-head"></div>
                 <div class="grey-main"></div>
+                
 
                 <!--l'app-window è l'interfaccia per l'utente-->
                 <div class="app-window pos-abs d-flex">
@@ -70,18 +71,19 @@
                             <input type="text" id="search" class="flex-grow" placeholder="Cerca o inizia una nuova chat"/>
                         </div>
 
+                        
                         <!--contacts-->
                         <div class="contacts overflow-y">
                             <!--card-->
                             <div class="card d-flex pos-rel" v-for="(card, cardIndex) in contacts">
                                 <div class="rounded-frame">
-                                        <img class="fit" :src="card.avatar" alt="card.avatar"/>
+                                        <img class="fit" :src="card.avatar" alt="card.avatar" />
                                 </div>
                                 <div class="contact-info flex-grow">
                                     <div class="name" >{{card.name}}</div>
-                                    <div class="last-message-sent" v-for="conversation in card.messages">{{conversation.message}}</div>
+                                    <div class="last-message-sent">{{card.messages[card.messages.length - 1].message}}</div>
                                 </div>
-                                <div class="pos-abs last-access-time"  v-for="conversation in card.messages">{{conversation.date}}</div>
+                                <div class="pos-abs last-access-time"  v-for="singleMessage in card.messages">{{card.messages[card.messages.length - 1].date}}</div>
                             </div>
 
                         </div>

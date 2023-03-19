@@ -6,6 +6,13 @@
 html{
     font-family: 'Raleway', sans-serif;
 }
+
+/*debug*/
+
+.debug{
+    top: 0;
+    left: 0;
+}
 /*palette colori*/
 :root{
     --primary-color:#eaeaea;
