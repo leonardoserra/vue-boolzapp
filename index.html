@@ -75,7 +75,7 @@
                         <!--contacts-->
                         <div class="contacts overflow-y">
                             <!--card-->
-                            <div class="card d-flex pos-rel"  v-for="card in contacts" @click="switchVisibility(card)" :class="card.visible?'selected':''">
+                            <div class="card d-flex pos-rel"  v-for="(card, cardIndex) in contacts" @click="switchVisibility(card, cardIndex)" :class="card.visible?'selected':''">
                                 <div class="rounded-frame">
                                         <img class="fit" :src="card.avatar" alt="card.avatar" />
                                 </div>
@@ -95,15 +95,15 @@
                     <div class="message-side">
                         <!--parte alta-->
                         <div class="message-header d-flex space-between align-center">
-                            <div class="user d-flex align-center" v-for="(conversationWindow, index) in contacts" v-if="true">
+                            <div class="user d-flex align-center">
                                 <div class="rounded-frame">
                                     <a href="#">
-                                        <img class ="fit" src="./img/avatar_1.jpg" alt="avatar-1"/>
+                                        <img class ="fit" :src="contacts[selectedConversation].avatar" :alt="contacts[selectedConversation].avatar" v-if="contacts[selectedConversation].visible"/>
                                     </a>
                                 </div>
                                 <div class="contact-info flex-grow">
-                                    <div class="username">Mariello</div>
-                                    <div class="last-message-info">ultimo accesso oggi alle 15:00</div>
+                                    <div class="username" v-if="contacts[selectedConversation].visible">{{contacts[selectedConversation].name}}</div>
+                                    <div class="last-message-info" v-if="contacts[selectedConversation].visible">{{contacts[selectedConversation].messages[contacts[selectedConversation].messages.length -1].date}}</div>
                                 </div>
                             </div>
                             <!--parte dx-->
@@ -112,7 +112,8 @@
                                     <i class="user-options-icon fa-solid fa-magnifying-glass"></i>
                                 </a>
                                 <a href="#">
-                                    <i class="user-options-icon fa-solid fa-paperclip"></i>                                </a>
+                                    <i class="user-options-icon fa-solid fa-paperclip"></i>
+                                </a>
                                 <a href="#">
                                     <i class="user-options-icon fa-solid fa-ellipsis-vertical"></i>
                                 </a>

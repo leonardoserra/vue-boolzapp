@@ -3,6 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
         return {
+            selectedConversation: 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -135,7 +136,8 @@ const { createApp } = Vue
     },
 
     methods:{
-        switchVisibility(card){
+        switchVisibility(card,index){
+            this.selectedConversation = index;
             return card.visible = !card.visible;
         }
     }
