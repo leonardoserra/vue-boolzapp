@@ -124,40 +124,11 @@
                         <!--parte centrale, corpo del messaggio-->
 
                         <div class="message-main overflow-y">
-                            <div class="main-container">
+                            <div class="main-container" v-if="contacts[selectedConversation].visible">
 
-                                <div class="sent">
-                                    <span class="speech-bubble">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, quaerat quidem deleniti beatae asperiores nesciunt error vitae iste cumque neque libero maxime aliquam cupiditate animi hic laborum. Ipsa, voluptates laboriosam.</span>
+                                <div v-for="singleMessage in contacts[selectedConversation].messages" :class="singleMessage.status">
+                                    <span class="speech-bubble">{{singleMessage.message}}</span>
                                 </div>
-
-                                <div class="received">
-                                    <span class="speech-bubble">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, quaerat quidem deleniti beatae asperiores nesciunt error vitae iste cumque neque libero maxime aliquam cupiditate animi hic laborum. Ipsa, voluptates laboriosam.</span>
-                                </div>
-
-                                <div class="sent">
-                                    <span class="speech-bubble">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, quaerat quidem deleniti beatae asperiores nesciunt error vitae iste cumque neque libero maxime aliquam cupiditate animi hic laborum. Ipsa, voluptates laboriosam.</span>
-                                </div>
-                                
-                                <div class="received">
-                                    <span class="speech-bubble">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, quaerat quidem deleniti beatae asperiores nesciunt error vitae iste cumque neque libero maxime aliquam cupiditate animi hic laborum. Ipsa, voluptates laboriosam.</span>
-                                </div>
-
-                                <div class="sent">
-                                    <span class="speech-bubble">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, quaerat quidem deleniti beatae asperiores nesciunt error vitae iste cumque neque libero maxime aliquam cupiditate animi hic laborum. Ipsa, voluptates laboriosam.</span>
-                                </div>
-                                
-                                <div class="received">
-                                    <span class="speech-bubble">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, quaerat quidem deleniti beatae asperiores nesciunt error vitae iste cumque neque libero maxime aliquam cupiditate animi hic laborum. Ipsa, voluptates laboriosam.</span>
-                                </div>
-
-                                <div class="sent">
-                                    <span class="speech-bubble">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, quaerat quidem deleniti beatae asperiores nesciunt error vitae iste cumque neque libero maxime aliquam cupiditate animi hic laborum. Ipsa, voluptates laboriosam.</span>
-                                </div>
-                                
-                                <div class="received">
-                                    <span class="speech-bubble">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, quaerat quidem deleniti beatae asperiores nesciunt error vitae iste cumque neque libero maxime aliquam cupiditate animi hic laborum. Ipsa, voluptates laboriosam.</span>
-                                </div>
-
 
                             </div>
 
