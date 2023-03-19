@@ -3,8 +3,10 @@ const { createApp } = Vue
   createApp({
     data() {
         return {
+            newSearch: '',
             newMessage: '',
             selectedConversation: 0,
+            filteredArray: [],
             contacts: [
                 {
                     name: 'Michele',
@@ -133,6 +135,7 @@ const { createApp } = Vue
     },
     
     mounted(){
+        this.searchFilter();
            
     },
 
@@ -168,6 +171,12 @@ const { createApp } = Vue
                 });
             }, 1000) 
         },
+
+        searchFilter(){
+            this.filteredArray = this.contacts.filter((card)=> card.name == this.newSearch);
+            console.log(this.filteredArray.forEach(element => this.filteredArray.push(element)));
+
+        }
 
     }
             
