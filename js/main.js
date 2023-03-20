@@ -14,6 +14,7 @@ const { createApp } = Vue
                 {
                     name: 'Michele',
                     avatar: './img/avatar_1.jpg',
+                    searchVisibility: true,
                     visible: true,
                     messages: [
                         {
@@ -36,6 +37,7 @@ const { createApp } = Vue
                 {
                     name: 'Fabio',
                     avatar: "./img/avatar_2.jpg",
+                    searchVisibility: true,
                     visible: false,
                     messages: [
                         {
@@ -58,6 +60,7 @@ const { createApp } = Vue
                 {
                     name: 'Samuele',
                     avatar: "./img/avatar_3.jpg",
+                    searchVisibility: true,
                     visible: false,
                     messages: [
                         {
@@ -80,6 +83,7 @@ const { createApp } = Vue
                 {
                     name: 'Alessandro B.',
                     avatar: "./img/avatar_4.jpg",
+                    searchVisibility: true,
                     visible: false,
                     messages: [
                         {
@@ -97,6 +101,7 @@ const { createApp } = Vue
                 {
                     name: 'Alessandro L.',
                     avatar: "./img/avatar_5.jpg",
+                    searchVisibility: true,
                     visible: false,
                     messages: [
                         {
@@ -114,6 +119,7 @@ const { createApp } = Vue
                 {
                     name: 'Claudia',
                     avatar: "./img/avatar_8.jpg",
+                    searchVisibility: true,
                     visible: false,
                     messages: [
                         {
