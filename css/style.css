@@ -200,11 +200,11 @@ html{
 
 .card .rounded-frame{
     height: 100%;
+    padding: 5px;
 }
 
 .card .rounded-frame .fit{
     height: 100%;
-    padding: 5px;
 }
 
 .card .contact-info{
