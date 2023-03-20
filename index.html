@@ -68,22 +68,24 @@
                         <!--search bar-->
                         <div class="search-bar d-flex">
                             <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
-                            <input type="text" id="search" class="flex-grow" placeholder="Cerca o inizia una nuova chat" v-model="newSearch"  />
+                            <input type="text" id="search" class="flex-grow" placeholder="Cerca o inizia una nuova chat" v-model="newSearch" @keyup="searchFilter()" />
                         </div>
 
                         
                         <!--contacts-->
                         <div class="contacts overflow-y">
                             <!--card-->
-                            <div class="card d-flex pos-rel"  v-for="(card, cardIndex) in contacts" @click="selectConversation(card, cardIndex)" :class="showConversation(card, cardIndex)">
-                                <div class="rounded-frame">
-                                        <img class="fit" :src="card.avatar" alt="card.avatar" />
+                            <div class="cardContainer" v-for="(card, cardIndex) in contacts" >
+                                <div class="card d-flex pos-rel"   @click="selectConversation(card, cardIndex)" :class="showConversation(card, cardIndex)" v-if="card.searchVisibility">
+                                    <div class="rounded-frame">
+                                            <img class="fit" :src="card.avatar" alt="card.avatar" />
+                                    </div>
+                                    <div class="contact-info flex-grow">
+                                        <div class="name" >{{card.name}}</div>
+                                        <div class="last-message-sent">{{card.messages[card.messages.length - 1].message}}</div>
+                                    </div>
+                                    <div class="pos-abs last-access-time"  v-for="singleMessage in card.messages">{{card.messages[card.messages.length - 1].date}}</div>
                                 </div>
-                                <div class="contact-info flex-grow">
-                                    <div class="name" >{{card.name}}</div>
-                                    <div class="last-message-sent">{{card.messages[card.messages.length - 1].message}}</div>
-                                </div>
-                                <div class="pos-abs last-access-time"  v-for="singleMessage in card.messages">{{card.messages[card.messages.length - 1].date}}</div>
                             </div>
 
                         </div>

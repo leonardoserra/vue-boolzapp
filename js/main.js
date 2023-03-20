@@ -60,7 +60,7 @@ const { createApp } = Vue
                 {
                     name: 'Samuele',
                     avatar: "./img/avatar_3.jpg",
-                    searchVisibility: true,
+                    searchVisibility: false,
                     visible: false,
                     messages: [
                         {
@@ -180,15 +180,16 @@ const { createApp } = Vue
             }, 1000) 
         },
         
-        //occhio da rivedere, non funziona, cerco di creare un 
+        //non funziona se non è case sensitive
         searchFilter(){
-           const arrayCopy = [...this.contacts.filter((element)=>element.name )];
-        //    const arrayCopy = [...filteredArray];
-        //    console.log(arrayCopy);
-           arrayCopy.forEach(element => {
-            const  {singleName}  = element;
-                console.log(typeof(singleName));
-            });
+            this.contacts.forEach((element)=>{
+               if(element.name.includes(this.newSearch)){
+                    element.searchVisibility = true;
+                }else{
+                    element.searchVisibility = false;
+                }
+            })
+           
         }
     }
             
