@@ -180,10 +180,12 @@ const { createApp } = Vue
             }, 1000) 
         },
         
-        //non funziona se non è case sensitive
+        //cerca se nella ricerca ce una parte del nome contatto, case sensitive off
         searchFilter(){
             this.contacts.forEach((element)=>{
-               if(element.name.includes(this.newSearch)){
+                const upperName = element.name.toUpperCase();
+                const upperSearch = this.newSearch.toUpperCase();
+               if(upperName.includes(upperSearch)){
                     element.searchVisibility = true;
                 }else{
                     element.searchVisibility = false;
