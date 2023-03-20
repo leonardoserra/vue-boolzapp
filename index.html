@@ -128,17 +128,17 @@
                         <div class="message-main overflow-y">
                             <div class="main-container" v-if="contacts[selectedConversation].visible">
 
-                                <div v-for="singleMessage in contacts[selectedConversation].messages" :class="singleMessage.status">
-                                    <span class="speech-bubble pos-rel">
+                                <div v-for="(singleMessage, singleMessageIndex) in contacts[selectedConversation].messages" :class="singleMessage.status">
+                                    <span class="speech-bubble pos-rel" @mouseover="mouseOver()" @mouseout="mouseOut()">
                                         {{singleMessage.message}}
                                         <span class="pos-abs speech-bubble-hour-sent">{{singleMessage.date}}</span>
-                                        <div class="arrow-option hidden pos-abs">
-                                            <i class="fa-solid fa-chevron-down"></i>
+                                        <div class="arrow-option hidden pos-abs" @click="mouseClick()" :class="mouseOverCheck?'show':''" >
+                                            <i class="show-pointer fa-solid fa-chevron-down" ></i>
                                         </div>
-                                        <div class="pos-abs delete-menu hidden">
+                                        <div class="pos-abs delete-menu hidden" v-bind:class="mouseClickStatus?'show':''">
                                             <ul>
-                                                <li>Info messaggio</li>
-                                                <li>Cancella messaggio</li>
+                                                <li class="show-pointer" @click="mouseClick()">Info messaggio</li>
+                                                <li class="show-pointer" @click="mouseClick()">Cancella messaggio</li>
                                             </ul>
                                         </div>
                                     </span>

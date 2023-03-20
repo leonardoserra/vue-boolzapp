@@ -10,6 +10,8 @@ const { createApp } = Vue
             newSearch: '',
             newMessage: '',
             selectedConversation: 0,
+            mouseOverCheck: false,
+            mouseClickStatus: false,
             contacts: [
                 {
                     name: 'Michele',
@@ -192,6 +194,19 @@ const { createApp } = Vue
                 }
             })
            
+        },
+
+        //function per il mouseover menu a tendina delete message
+        mouseOver(){
+            this.mouseOverCheck = true;
+        },
+
+        mouseOut(){
+            this.mouseOverCheck = false;
+        },
+
+        mouseClick(){
+            this.mouseClickStatus = !this.mouseClickStatus;
         }
     }
             

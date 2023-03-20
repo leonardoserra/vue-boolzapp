@@ -73,6 +73,10 @@ html{
     object-fit: cover;
 }
 
+.show-pointer{
+    cursor: pointer;
+}
+
 /*background*/
 .green-head{
     min-width: 100%;
