@@ -1,8 +1,12 @@
+const DateTime = luxon.DateTime;
 const { createApp } = Vue
 
   createApp({
     data() {
         return {
+            // actualTime: DateTime.now().TIME_24_SIMPLE(),
+            actualTime: DateTime.now().setLocale("it").toLocaleString(DateTime.TIME_24_SIMPLE),
+            actualDate: DateTime.now().setLocale("it").toLocaleString(DateTime.DATE_SHORT),
             newSearch: '',
             newMessage: '',
             selectedConversation: 0,
@@ -155,7 +159,7 @@ const { createApp } = Vue
 
         addMessage(place){
             place.push({
-                date: new Date().getHours().toString() + ':' + new Date().getMinutes().toString() ,
+                date: this.actualDate +' '+ this.actualTime,
                 message: this.newMessage,
                 status: 'sent'
             });
@@ -163,7 +167,7 @@ const { createApp } = Vue
             
             setTimeout(()=>{
                 place.push({
-                    date: new Date().getHours().toString() + ':' + new Date().getMinutes().toString() ,
+                    date: this.actualDate +' '+ this.actualTime,
                     message: 'ok',
                     status: 'received'
                 });

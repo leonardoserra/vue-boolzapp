@@ -75,7 +75,7 @@
                         <!--contacts-->
                         <div class="contacts overflow-y">
                             <!--card-->
-                            <div class="card d-flex pos-rel"  v-for="(card, cardIndex) in contacts" @click="selectConversation(card, cardIndex)" :class="showConversation(card, cardIndex)" v-if="searchFilter()">
+                            <div class="card d-flex pos-rel"  v-for="(card, cardIndex) in contacts" @click="selectConversation(card, cardIndex)" :class="showConversation(card, cardIndex)">
                                 <div class="rounded-frame">
                                         <img class="fit" :src="card.avatar" alt="card.avatar" />
                                 </div>
@@ -167,7 +167,8 @@
             </div>
 
         </div>
-
+        <!--importo luxon-->
+        <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
         <!--import cdn VueJs-->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <!--import my-script-->
