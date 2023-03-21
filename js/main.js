@@ -164,7 +164,7 @@ const { createApp } = Vue
                 return 'selected';
 
             }else{
-                card.status = false;
+                card.visible = false;
                 return '';
             }
         },
