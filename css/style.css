@@ -124,7 +124,12 @@ html{
     padding: 0px 20px;
 }
 
-.user-options a{
+/* .user-options a{
+    margin-left: 20px;
+} */
+
+.user-options > span{
+    display:inline-block;
     margin-left: 20px;
 }
 

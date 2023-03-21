@@ -40,15 +40,15 @@
                             </div>
                             <!--parte dx-->
                             <div class="user-options">
-                                <a href="#">
-                                    <i class="user-options-icon fa-solid fa-circle-notch"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="user-options-icon fa-solid fa-message"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="user-options-icon fa-solid fa-ellipsis-vertical"></i>
-                                </a>
+                                <span>
+                                    <i class="user-options-icon show-pointer fa-solid fa-circle-notch"></i>
+                                </span>
+                                <span>
+                                    <i class="user-options-icon show-pointer fa-solid fa-message"></i>
+                                </span>
+                                <span>
+                                    <i class="user-options-icon show-pointer fa-solid fa-ellipsis-vertical"></i>
+                                </span>
                             </div>
                         </div>
 
@@ -67,7 +67,7 @@
 
                         <!--search bar-->
                         <div class="search-bar d-flex">
-                            <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <button type="button"><i class="fa-solid show-pointer fa-magnifying-glass" @click="searchFilter()"></i></button>
                             <input type="text" id="search" class="flex-grow" placeholder="Cerca o inizia una nuova chat" v-model="newSearch" @keyup="searchFilter()" />
                         </div>
 
@@ -110,15 +110,15 @@
                             </div>
                             <!--parte dx-->
                             <div class="user-options">
-                                <a href="#">
-                                    <i class="user-options-icon fa-solid fa-magnifying-glass"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="user-options-icon fa-solid fa-paperclip"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="user-options-icon fa-solid fa-ellipsis-vertical"></i>
-                                </a>
+                                <span>
+                                    <i class="user-options-icon show-pointer fa-solid fa-magnifying-glass"></i>
+                                </span>
+                                <span>
+                                    <i class="user-options-icon show-pointer fa-solid fa-paperclip"></i>
+                                </span>
+                                <span>
+                                    <i class="user-options-icon show-pointer fa-solid fa-ellipsis-vertical"></i>
+                                </span>
                             </div>
                         </div>
 
