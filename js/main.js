@@ -233,8 +233,8 @@ const { createApp } = Vue
         },
 
         deleteMessage(place,index){
-            place.splice(index, 1);
-            this.mouseClickStatus = !this.mouseClickStatus;
+                place.splice(index, 1);
+                this.mouseClickStatus = !this.mouseClickStatus;
 
         }
         
