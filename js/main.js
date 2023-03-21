@@ -12,6 +12,10 @@ const { createApp } = Vue
             selectedConversation: 0,
             mouseOverCheck: false,
             mouseClickStatus: false,
+            user: {
+                name: 'Leo',
+                avatar: './img/avatar_io.jpg',
+            },
             contacts: [
                 {
                     name: 'Michele',
@@ -197,6 +201,7 @@ const { createApp } = Vue
         },
 
         //function per il mouseover menu a tendina delete message
+        //devi solo indicare quella finestra da fixare
         mouseOver(){
             this.mouseOverCheck = true;
         },

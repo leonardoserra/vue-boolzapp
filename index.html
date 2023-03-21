@@ -32,11 +32,11 @@
                             <!--parte sx-->
                             <div class="user d-flex align-center">
                                 <div class="rounded-frame">
-                                    <a href="#">
-                                        <img class ="fit" src="./img/avatar_io.jpg" alt="mine"/>
-                                    </a>
+                                    
+                                        <img class ="fit show-pointer" :src="user.avatar" :alt="user.avatar"/>
+                                    
                                 </div>
-                                <div class="my-name">Leo</div>
+                                <div class="my-name">{{user.name}}</div>
                             </div>
                             <!--parte dx-->
                             <div class="user-options">
