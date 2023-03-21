@@ -163,10 +163,11 @@ const { createApp } = Vue
                 card.visible = true;
                 return 'selected';
 
-            }else{
-                card.visible = false;
-                return '';
             }
+            // else{
+            //     card.visible = false;
+            //     return '';
+            // }
         },
 
         addMessage(place){
