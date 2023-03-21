@@ -220,13 +220,15 @@ const { createApp } = Vue
         // },
         mouseOver(index){
             this.selectedMessage = index;
+        },
 
-
+        mouseOut(){
+            this.selectedMessage = null;
         },
 
         mouseClick(index){
-            this.selectedMessage = index;
             this.mouseClickStatus = !this.mouseClickStatus;
+            this.clickedMessage = index;
         }
         
     }
