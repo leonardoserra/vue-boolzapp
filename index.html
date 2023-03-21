@@ -138,7 +138,7 @@
                                         <div class="pos-abs delete-menu hidden" v-bind:class="clickedMessage == singleMessageIndex && mouseClickStatus?'show':''">
                                             <ul>
                                                 <li class="show-pointer">Info messaggio</li>
-                                                <li class="show-pointer">Cancella messaggio</li>
+                                                <li class="show-pointer" @click="deleteMessage(contacts[selectedConversation].messages,singleMessageIndex)">Cancella messaggio</li>
                                             </ul>
                                         </div>
                                     </span>

@@ -13,6 +13,7 @@ const { createApp } = Vue
             selectedMessage: null,
             mouseOverCheck: false,
             mouseClickStatus: false,
+            clickedMessage: null,
             user: {
                 name: 'Leo',
                 avatar: './img/avatar_io.jpg',
@@ -227,8 +228,14 @@ const { createApp } = Vue
         },
 
         mouseClick(index){
-            this.mouseClickStatus = !this.mouseClickStatus;
             this.clickedMessage = index;
+            this.mouseClickStatus = !this.mouseClickStatus;
+        },
+
+        deleteMessage(place,index){
+            place.splice(index, 1);
+            this.mouseClickStatus = !this.mouseClickStatus;
+
         }
         
     }
