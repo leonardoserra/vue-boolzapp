@@ -82,7 +82,7 @@
                                     </div>
                                     <div class="contact-info flex-grow">
                                         <div class="name" >{{card.name}}</div>
-                                        <div class="last-message-sent" v-if="card.messages.length > 0">{{card.messages[card.messages.length - 1].message}}</div>
+                                        <div class="last-message-sent">{{card.messages[card.messages.length - 1].message}}</div>
                                     </div>
                                     <div class="pos-abs last-access-time"  v-for="singleMessage in card.messages">{{card.messages[card.messages.length - 1].date}}</div>
                                 </div>
@@ -152,18 +152,18 @@
                         <div class="message-footer d-flex space-between align-center">
 
                             <div class="box text-center">
-                                <a href="">
-                                    <i class="user-options-icon fa-regular fa-face-smile"></i>
-                                </a>
+                                
+                                    <i class="show-pointer user-options-icon fa-regular fa-face-smile"></i>
+                                
                             </div>
 
 
 
                             <input class="message-bar flex-grow" type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="addMessage(contacts[selectedConversation].messages)"/>
                             <div class="box text-center">
-                                <a href="">
-                                    <i class="user-options-icon fa-solid fa-microphone"></i>
-                                </a>
+                                
+                                    <i class="show-pointer user-options-icon fa-solid fa-microphone"></i>
+                                
                             </div>
                         </div>
 

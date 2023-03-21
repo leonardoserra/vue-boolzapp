@@ -189,7 +189,13 @@ const { createApp } = Vue
                     message: 'ok',
                     status: 'received'
                 });
-            }, 1000) 
+            }, 1000); 
+        },
+
+        deleteMessage(place,index){
+            place.splice(index, 1);
+            this.mouseClickStatus = !this.mouseClickStatus;
+
         },
         
         //cerca se nella ricerca ce una parte del nome contatto, case sensitive off
@@ -207,18 +213,7 @@ const { createApp } = Vue
         },
 
         //function per il mouseover menu a tendina delete message
-        //devi solo indicare quella finestra da fixare
-
-        //a riga 131 html ce un v-for , devi usare quello per identificare
-        //il mex che stai cliccando o passando sopra, forse la variabile non 
-        //devi dichiararla fuori ma dentro le funzioni
-        // mouseOver(){
-        //     this.mouseOverCheck = true;
-        // },
-
-        // mouseOut(){
-        //     this.mouseOverCheck = false;
-        // },
+       
         mouseOver(index){
             this.selectedMessage = index;
         },
@@ -230,13 +225,9 @@ const { createApp } = Vue
         mouseClick(index){
             this.clickedMessage = index;
             this.mouseClickStatus = !this.mouseClickStatus;
-        },
-
-        deleteMessage(place,index){
-                place.splice(index, 1);
-                this.mouseClickStatus = !this.mouseClickStatus;
-
         }
+
+       
         
     }
             
