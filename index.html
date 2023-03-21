@@ -129,16 +129,16 @@
                             <div class="main-container" v-if="contacts[selectedConversation].visible">
 
                                 <div v-for="(singleMessage, singleMessageIndex) in contacts[selectedConversation].messages" :class="singleMessage.status">
-                                    <span class="speech-bubble pos-rel" @mouseover="mouseOver()" @mouseout="mouseOut()">
+                                    <span class="speech-bubble pos-rel" @mouseover="mouseOver(singleMessageIndex)">
                                         {{singleMessage.message}}
                                         <span class="pos-abs speech-bubble-hour-sent">{{singleMessage.date}}</span>
-                                        <div class="arrow-option hidden pos-abs" @click="mouseClick()" :class="mouseOverCheck?'show':''" >
+                                        <div class="arrow-option hidden pos-abs" @click="mouseClick(singleMessageIndex)" :class="selectedMessage == singleMessageIndex?'show':''" >
                                             <i class="show-pointer fa-solid fa-chevron-down" ></i>
                                         </div>
                                         <div class="pos-abs delete-menu hidden" v-bind:class="mouseClickStatus?'show':''">
                                             <ul>
-                                                <li class="show-pointer" @click="mouseClick()">Info messaggio</li>
-                                                <li class="show-pointer" @click="mouseClick()">Cancella messaggio</li>
+                                                <li class="show-pointer">Info messaggio</li>
+                                                <li class="show-pointer">Cancella messaggio</li>
                                             </ul>
                                         </div>
                                     </span>

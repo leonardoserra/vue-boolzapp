@@ -10,6 +10,7 @@ const { createApp } = Vue
             newSearch: '',
             newMessage: '',
             selectedConversation: 0,
+            selectedMessage: null,
             mouseOverCheck: false,
             mouseClickStatus: false,
             user: {
@@ -210,17 +211,24 @@ const { createApp } = Vue
         //a riga 131 html ce un v-for , devi usare quello per identificare
         //il mex che stai cliccando o passando sopra, forse la variabile non 
         //devi dichiararla fuori ma dentro le funzioni
-        mouseOver(){
-            this.mouseOverCheck = true;
+        // mouseOver(){
+        //     this.mouseOverCheck = true;
+        // },
+
+        // mouseOut(){
+        //     this.mouseOverCheck = false;
+        // },
+        mouseOver(index){
+            this.selectedMessage = index;
+
+
         },
 
-        mouseOut(){
-            this.mouseOverCheck = false;
-        },
-
-        mouseClick(){
+        mouseClick(index){
+            this.selectedMessage = index;
             this.mouseClickStatus = !this.mouseClickStatus;
         }
+        
     }
             
 }).mount('#app')
