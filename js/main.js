@@ -202,6 +202,10 @@ const { createApp } = Vue
 
         //function per il mouseover menu a tendina delete message
         //devi solo indicare quella finestra da fixare
+
+        //a riga 131 html ce un v-for , devi usare quello per identificare
+        //il mex che stai cliccando o passando sopra, forse la variabile non 
+        //devi dichiararla fuori ma dentro le funzioni
         mouseOver(){
             this.mouseOverCheck = true;
         },
