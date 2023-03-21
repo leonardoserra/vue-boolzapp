@@ -5,8 +5,8 @@ const { createApp } = Vue
     data() {
         return {
             // actualTime: DateTime.now().TIME_24_SIMPLE(),
-            actualTime: DateTime.now().setLocale("it").toLocaleString(DateTime.TIME_24_SIMPLE),
-            actualDate: DateTime.now().setLocale("it").toLocaleString(DateTime.DATE_SHORT),
+            // actualTime: DateTime.now().setLocale("it").toLocaleString(DateTime.TIME_24_SIMPLE),
+            // actualDate: DateTime.now().setLocale("it").toLocaleString(DateTime.DATE_SHORT),
             newSearch: '',
             newMessage: '',
             selectedConversation: 0,
@@ -171,8 +171,11 @@ const { createApp } = Vue
         },
 
         addMessage(place){
+            const actualTime = DateTime.now().setLocale("it").toLocaleString(DateTime.TIME_24_SIMPLE);
+            const actualDate = DateTime.now().setLocale("it").toLocaleString(DateTime.DATE_SHORT);
+
             place.push({
-                date: this.actualDate +' '+ this.actualTime,
+                date: actualDate +' '+ actualTime,
                 message: this.newMessage,
                 status: 'sent'
             });
@@ -180,7 +183,7 @@ const { createApp } = Vue
             
             setTimeout(()=>{
                 place.push({
-                    date: this.actualDate +' '+ this.actualTime,
+                    date: actualDate +' '+ actualTime,
                     message: 'ok',
                     status: 'received'
                 });
