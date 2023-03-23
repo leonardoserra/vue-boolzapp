@@ -343,12 +343,6 @@ html{
     background-color: var(--received-color);
 }
 
-
-
-
-
-
-
 /*message footer*/
 .message-footer{
     height: 50px;
@@ -357,9 +351,7 @@ html{
     padding: 5px;
 }
 
-.message-footer a{
-    text-decoration: none;
-}
+
 .message-footer .box{
     width: 60px;
 }
